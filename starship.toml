@@ -1,0 +1,80 @@
+format = """
+$os\
+$username\
+$hostname\
+$directory\
+$git_branch\
+$git_state\
+$git_status\
+$cmd_duration\
+$line_break\
+$conda\
+$python\
+$c\
+$character"""
+
+[character]
+success_symbol = "[>](purple)"
+error_symbol = "[>](red)"
+vimcmd_symbol = "[λ](green)"
+
+[directory]
+style = "blue"
+read_only = " 󰌾"
+
+[username]
+style_user = "green bold"
+style_root = "red bold"
+format = "[$user]($style) "
+disabled = false
+show_always = true
+
+[hostname]
+ssh_only = false
+format = 'on [$hostname](bold yellow) '
+trim_at = "."
+disabled = false
+
+[git_branch]
+symbol = " "
+format = "[$symbol($branch)]($style)"
+style = "bright-black"
+
+[git_status]
+format = "[[(*$conflicted$untracked$modified$staged$renamed$deleted)](218) ($ahead_behind$stashed)]($style)"
+style = "cyan"
+conflicted = "​"
+untracked = "​"
+modified = "​"
+staged = "​"
+renamed = "​"
+deleted = "​"
+stashed = "≡"
+
+[git_commit]
+tag_symbol = '  '
+
+[git_state]
+format = '\([$state( $progress_current/$progress_total)]($style)\) '
+style = "bright-black"
+
+[cmd_duration]
+format = "[$duration]($style) "
+style = "yellow"
+
+[python]
+symbol = " "
+format = "[$symbol($version)]($style) "
+
+[conda]
+ignore_base = true
+symbol = " "
+format = '[$symbol$environment]($style) '
+
+[c]
+symbol = " "
+format = '[$symbol($version)]($style)'
+
+[os.symbols]
+Ubuntu = " "
+Windows = "󰍲 "
