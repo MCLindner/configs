@@ -73,7 +73,7 @@ format = '[$symbol$environment]($style) '
 
 [c]
 symbol = " "
-format = '[$symbol($version)]($style)'
+format = '[$symbol($version) ]($style)'
 
 [os.symbols]
 Ubuntu = " "
