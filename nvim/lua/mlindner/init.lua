@@ -8,11 +8,11 @@ require("mlindner.lazy_init")
 
 -- Theme
 -- Uncomment a theme!
--- vim.o.background = "light"
--- vim.cmd([[colorscheme gruvbox]])
+vim.o.background = "light"
+vim.cmd([[colorscheme gruvbox]])
 
-vim.o.background = "dark"
-vim.cmd([[colorscheme dracula]])
+-- vim.o.background = "dark"
+-- vim.cmd([[colorscheme dracula]])
 vim.api.nvim_set_hl(0, "ZenBg", { bg = "NONE" })
 -- Wow!
 
