@@ -1,0 +1,19 @@
+<application>
+  <component name="ActionsLocalSummary">
+    <e n="EditorEnter">
+      <i c="1" l="1752352466629" />
+    </e>
+    <e n="ExternalSystem.ProjectRefreshAction">
+      <i c="2" l="1752352959641" />
+    </e>
+    <e n="SaveAll">
+      <i c="1" l="1752352473416" />
+    </e>
+    <e n="com.intellij.openapi.externalSystem.util.ExternalSystemUtil$6">
+      <i c="1" l="1752352663723" />
+    </e>
+    <e n="com.intellij.openapi.project.DumbAwareAction$SimpleDumbAwareAction">
+      <i c="4" l="1752352896907" />
+    </e>
+  </component>
+</application>
