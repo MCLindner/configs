@@ -1,0 +1,37 @@
+" search for actions: :actionlist <patter>
+
+set number                        " Show current line number
+set relativenumber                " Show relative line numbers
+set hlsearch                      " highlight search occurrences
+set ignorecase                    " ignore case in search patterns
+set smartcase                     " no ignore case when pattern is uppercase
+set incsearch                     " show search results while typing
+set wrapscan                      " searches wrap around the end of the file
+
+set gdefault                      " substitute all occurrences in line per default
+set history=10000                 " keep x lines of command line history
+set scrolloff=5 sidescrolloff=10  " keep some lines before and after the cursor visible
+set clipboard=unnamedplus,unnamed,ideaput " integrate with system clipboard
+
+
+" https://github.com/JetBrains/ideavim/wiki/%22set%22-commands
+set multiple-cursors
+set commentary
+set surround                      " emulate vim-surround plugin
+set ideajoin
+" set ideastatusicon=disabled
+
+
+" set <leader> to <space>
+let mapleader = " "
+
+map <leader>h :action ShowHoverInfo<CR>
+map <leader>z <Action>(ToggleDistractionFreeMode)
+map <leader>sf <Action>(GotoFile)
+" Map \r to the Reformat Code action
+:map \r <Action>(ReformatCode)
+" Map <leader>d to start debug
+:map <leader>d <Action>(Debug)
+" Map \b to toggle the breakpoint on the current line
+:map \b <Action>(ToggleLineBreakpoint)
+map <leader>qi <Action>(QuickImplementations)
