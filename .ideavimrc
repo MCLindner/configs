@@ -1,5 +1,20 @@
-" search for actions: :actionlist <patter>
+" .ideavimrc is a configuration file for IdeaVim plugin. It uses
+"   the same commands as the original .vimrc configuration.
+" You can find a list of commands here: https://jb.gg/h38q75
+" Find more examples here: https://jb.gg/share-ideavimrc
 
+" leader key bindings
+" set <leader> to <space>
+let mapleader = " "
+
+" Don't use Ex mode, use Q for formatting.
+map Q gq
+
+" stop highlight with escape
+nnoremap <Esc> :nohlsearch<CR><Esc>
+
+" https://github.com/JetBrains/ideavim/wiki/%22set%22-commands
+set highlightedyank
 set number                        " Show current line number
 set relativenumber                " Show relative line numbers
 set hlsearch                      " highlight search occurrences
@@ -7,23 +22,34 @@ set ignorecase                    " ignore case in search patterns
 set smartcase                     " no ignore case when pattern is uppercase
 set incsearch                     " show search results while typing
 set wrapscan                      " searches wrap around the end of the file
-
 set gdefault                      " substitute all occurrences in line per default
 set history=10000                 " keep x lines of command line history
 set scrolloff=5 sidescrolloff=10  " keep some lines before and after the cursor visible
 set clipboard=unnamedplus,unnamed,ideaput " integrate with system clipboard
-
-
-" https://github.com/JetBrains/ideavim/wiki/%22set%22-commands
-set multiple-cursors
+set which-key
 set commentary
 set surround                      " emulate vim-surround plugin
 set ideajoin
+set ideawrite
 " set ideastatusicon=disabled
+set multiple-cursors
 
+" Remappings
+" Remap multiple-cursors shortcuts to match terryma/vim-multiple-cursors
+nmap <C-n> <Plug>NextWholeOccurrence
+xmap <C-n> <Plug>NextWholeOccurrence
+nmap g<C-n> <Plug>NextOccurrence
+xmap g<C-n> <Plug>NextOccurrence
+xmap <C-x> <Plug>SkipOccurrence
+xmap <C-p> <Plug>RemoveOccurrence
 
-" set <leader> to <space>
-let mapleader = " "
+" Note that the default <A-n> and g<A-n> shortcuts don't work on Mac due to dead keys.
+" <A-n> is used to enter accented text e.g. ñ
+" Feel free to pick your own mappings that are not affected. I like to use <leader>
+nmap <leader><C-n> <Plug>AllWholeOccurrences
+xmap <leader><C-n> <Plug>AllWholeOccurrences
+nmap <leader>g<C-n> <Plug>AllOccurrences
+xmap <leader>g<C-n> <Plug>AllOccurrences
 
 map <leader>h :action ShowHoverInfo<CR>
 map <leader>z <Action>(ToggleDistractionFreeMode)
