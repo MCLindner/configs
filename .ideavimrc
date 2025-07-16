@@ -3,16 +3,6 @@
 " You can find a list of commands here: https://jb.gg/h38q75
 " Find more examples here: https://jb.gg/share-ideavimrc
 
-" leader key bindings
-" set <leader> to <space>
-let mapleader = " "
-
-" Don't use Ex mode, use Q for formatting.
-map Q gq
-
-" stop highlight with escape
-nnoremap <Esc> :nohlsearch<CR><Esc>
-
 " https://github.com/JetBrains/ideavim/wiki/%22set%22-commands
 set highlightedyank
 set number                        " Show current line number
@@ -34,7 +24,22 @@ set ideawrite
 " set ideastatusicon=disabled
 set multiple-cursors
 
-" Remappings
+" leader key bindings
+" set <leader> to <space>
+let mapleader = " "
+
+" Don't use Ex mode, use Q for formatting.
+map Q gq
+
+" stop highlight with escape
+nnoremap <Esc> :nohlsearch<CR><Esc>
+
+" Use Ctrl + hjkl to move between splits
+nnoremap <C-h> <C-w>h
+nnoremap <C-j> <C-w>j
+nnoremap <C-k> <C-w>k
+nnoremap <C-l> <C-w>l
+
 " Remap multiple-cursors shortcuts to match terryma/vim-multiple-cursors
 nmap <C-n> <Plug>NextWholeOccurrence
 xmap <C-n> <Plug>NextWholeOccurrence
