@@ -36,5 +36,5 @@ if vim.g.vscode then
 	vim.keymap.set("n", "<Esc>", "<cmd>nohlsearch<CR>")
 else
 	-- ordinary Neovim
-	require("minimal")
+	require("mlindner")
 end
