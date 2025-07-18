@@ -1,0 +1,64 @@
+<application>
+  <component name="ActionsLocalSummary">
+    <e n="$Redo">
+      <i c="3" l="1752705217235" />
+    </e>
+    <e n="$Undo">
+      <i c="6" l="1752705353414" />
+    </e>
+    <e n="Console.TableResult.RenameColumn">
+      <i c="2" l="1752704703142" />
+    </e>
+    <e n="EditorBackSpace">
+      <i c="37" l="1752710583022" />
+    </e>
+    <e n="EditorChooseLookupItem">
+      <i c="3" l="1752709869511" />
+    </e>
+    <e n="EditorDown">
+      <i c="9" l="1752709246323" />
+    </e>
+    <e n="EditorEnter">
+      <i c="50" l="1752712490455" />
+    </e>
+    <e n="EditorEscape">
+      <i c="14" l="1752710583451" />
+    </e>
+    <e n="EditorLeft">
+      <i c="1" l="1752705320560" />
+    </e>
+    <e n="EditorTab">
+      <i c="2" l="1752705376124" />
+    </e>
+    <e n="EditorUp">
+      <i c="11" l="1752709244518" />
+    </e>
+    <e n="ProblemsView.QuickFixes">
+      <i c="2" l="1752699513558" />
+    </e>
+    <e n="Run">
+      <i c="2" l="1752704711959" />
+    </e>
+    <e n="VimPluginToggle">
+      <i c="2" l="1752709321426" />
+    </e>
+    <e n="VimShortcutKeyAction">
+      <i c="51" l="1752710516180" />
+    </e>
+    <e n="com.intellij.openapi.project.DumbAwareAction$SimpleDumbAwareAction">
+      <i c="8" l="1752712853935" />
+    </e>
+    <e n="com.jetbrains.python.sdk.AddLocalInterpreterAction">
+      <i c="2" l="1752699412082" />
+    </e>
+    <e n="com.jetbrains.python.sdk.PySdkPopupFactory$InterpreterSettingsAction">
+      <i c="1" l="1752699274882" />
+    </e>
+    <e n="com.jetbrains.python.sdk.PySdkPopupFactory$SwitchToSdkAction">
+      <i c="1" l="1752699383797" />
+    </e>
+    <e n="com.jetbrains.rdserver.daemon.tooltips.BackendTooltipActionProvider$getAction$1">
+      <i c="2" l="1752699626805" />
+    </e>
+  </component>
+</application>

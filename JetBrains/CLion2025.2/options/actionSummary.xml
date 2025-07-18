@@ -1,0 +1,16 @@
+<application>
+  <component name="ActionsLocalSummary">
+    <e n="$Undo">
+      <i c="3" l="1752713396439" />
+    </e>
+    <e n="OpenFile">
+      <i c="1" l="1752714152900" />
+    </e>
+    <e n="SaveAll">
+      <i c="1" l="1752713807333" />
+    </e>
+    <e n="com.intellij.openapi.project.DumbAwareAction$SimpleDumbAwareAction">
+      <i c="2" l="1752714118078" />
+    </e>
+  </component>
+</application>

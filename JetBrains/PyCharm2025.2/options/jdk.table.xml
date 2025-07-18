@@ -1,0 +1,92 @@
+<application>
+  <component name="ProjectJdkTable">
+    <jdk version="2">
+      <name value="Python 3.10" />
+      <type value="Python SDK" />
+      <version value="Python 3.10.12" />
+      <homePath value="/usr/bin/python3.10" />
+      <roots>
+        <classPath>
+          <root type="composite">
+            <root url="file:///usr/lib/python3.10" type="simple" />
+            <root url="file:///usr/lib/python3.10/lib-dynload" type="simple" />
+            <root url="file:///usr/local/lib/python3.10/dist-packages" type="simple" />
+            <root url="file:///usr/lib/python3/dist-packages" type="simple" />
+            <root url="file://$USER_HOME$/.cache/JetBrains/PyCharm2025.2/python_stubs/-32419096" type="simple" />
+            <root url="file://$APPLICATION_HOME_DIR$/plugins/python-ce/helpers/typeshed/stdlib" type="simple" />
+          </root>
+        </classPath>
+        <sourcePath>
+          <root type="composite" />
+        </sourcePath>
+      </roots>
+      <additional SDK_UUID="32f534ac-38bf-4a27-be6a-7848be36ce2d">
+        <setting name="FLAVOR_ID" value="UnixPythonSdkFlavor" />
+        <setting name="FLAVOR_DATA" value="{}" />
+      </additional>
+    </jdk>
+    <jdk version="2">
+      <name value="la-import" />
+      <type value="Python SDK" />
+      <version value="Python 3.12.11" />
+      <homePath value="$USER_HOME$/miniconda3/envs/la-import/bin/python" />
+      <roots>
+        <classPath>
+          <root type="composite">
+            <root url="file://$USER_HOME$/miniconda3/envs/la-import/lib/python3.12" type="simple" />
+            <root url="file://$USER_HOME$/miniconda3/envs/la-import/lib/python3.12/lib-dynload" type="simple" />
+            <root url="file://$USER_HOME$/miniconda3/envs/la-import/lib/python3.12/site-packages" type="simple" />
+            <root url="file://$USER_HOME$/.cache/JetBrains/PyCharm2025.2/python_stubs/1876587054" type="simple" />
+            <root url="file://$APPLICATION_HOME_DIR$/plugins/python-ce/helpers/typeshed/stdlib" type="simple" />
+            <root url="file://$APPLICATION_HOME_DIR$/plugins/python-ce/helpers/typeshed/stubs/setuptools" type="simple" />
+          </root>
+        </classPath>
+        <sourcePath>
+          <root type="composite" />
+        </sourcePath>
+      </roots>
+      <additional ASSOCIATED_PROJECT_PATH="$USER_HOME$/la-import" SDK_UUID="7b7ca675-575a-4f07-92ce-e0dab39f0e6a">
+        <setting name="FLAVOR_ID" value="Conda" />
+        <setting name="FLAVOR_DATA" value="{&quot;env&quot;:{&quot;envIdentity&quot;:{&quot;sealedClassChildId&quot;:&quot;NamedEnv&quot;,&quot;data&quot;:{&quot;envName&quot;:&quot;la-import&quot;,&quot;userReadableName&quot;:&quot;la-import&quot;}},&quot;fullCondaPathOnTarget&quot;:&quot;/home/mlindner/miniconda3/bin/conda&quot;}}" />
+      </additional>
+    </jdk>
+    <jdk version="2">
+      <name value="$USER_HOME$/miniconda3" />
+      <type value="Python SDK" />
+      <version value="Python 3.11.11" />
+      <homePath value="$USER_HOME$/miniconda3/bin/python" />
+      <roots>
+        <classPath>
+          <root type="composite">
+            <root url="file://$USER_HOME$/miniconda3/lib/python3.11" type="simple" />
+            <root url="file://$USER_HOME$/miniconda3/lib/python3.11/lib-dynload" type="simple" />
+            <root url="file://$USER_HOME$/miniconda3/lib/python3.11/site-packages" type="simple" />
+            <root url="file://$USER_HOME$/.cache/JetBrains/PyCharm2025.2/python_stubs/2036499221" type="simple" />
+            <root url="file://$APPLICATION_HOME_DIR$/plugins/python-ce/helpers/typeshed/stdlib" type="simple" />
+            <root url="file://$APPLICATION_HOME_DIR$/plugins/python-ce/helpers/typeshed/stubs/six" type="simple" />
+            <root url="file://$APPLICATION_HOME_DIR$/plugins/python-ce/helpers/typeshed/stubs/cffi" type="simple" />
+            <root url="file://$APPLICATION_HOME_DIR$/plugins/python-ce/helpers/typeshed/stubs/tqdm" type="simple" />
+            <root url="file://$APPLICATION_HOME_DIR$/plugins/python-ce/helpers/typeshed/stubs/zstd" type="simple" />
+            <root url="file://$APPLICATION_HOME_DIR$/plugins/python-ce/helpers/typeshed/stubs/pyasn1" type="simple" />
+            <root url="file://$APPLICATION_HOME_DIR$/plugins/python-ce/helpers/typeshed/stubs/boltons" type="simple" />
+            <root url="file://$APPLICATION_HOME_DIR$/plugins/python-ce/helpers/typeshed/stubs/httplib2" type="simple" />
+            <root url="file://$APPLICATION_HOME_DIR$/plugins/python-ce/helpers/typeshed/stubs/oauthlib" type="simple" />
+            <root url="file://$APPLICATION_HOME_DIR$/plugins/python-ce/helpers/typeshed/stubs/requests" type="simple" />
+            <root url="file://$APPLICATION_HOME_DIR$/plugins/python-ce/helpers/typeshed/stubs/cachetools" type="simple" />
+            <root url="file://$APPLICATION_HOME_DIR$/plugins/python-ce/helpers/typeshed/stubs/setuptools" type="simple" />
+            <root url="file://$APPLICATION_HOME_DIR$/plugins/python-ce/helpers/typeshed/stubs/beautifulsoup4" type="simple" />
+            <root url="file://$APPLICATION_HOME_DIR$/plugins/python-ce/helpers/typeshed/stubs/python-dateutil" type="simple" />
+            <root url="file://$APPLICATION_HOME_DIR$/plugins/python-ce/helpers/typeshed/stubs/requests-oauthlib" type="simple" />
+          </root>
+        </classPath>
+        <sourcePath>
+          <root type="composite" />
+        </sourcePath>
+      </roots>
+      <additional SDK_UUID="ac89799e-4ab3-4aa8-b084-5ba94d42be64">
+        <setting name="FLAVOR_ID" value="Conda" />
+        <setting name="FLAVOR_DATA" value="{&quot;env&quot;:{&quot;envIdentity&quot;:{&quot;sealedClassChildId&quot;:&quot;UnnamedEnv&quot;,&quot;data&quot;:{&quot;envPath&quot;:&quot;/home/mlindner/miniconda3&quot;,&quot;isBase&quot;:true,&quot;userReadableName&quot;:&quot;/home/mlindner/miniconda3&quot;}},&quot;fullCondaPathOnTarget&quot;:&quot;/home/mlindner/miniconda3/bin/conda&quot;}}" />
+      </additional>
+    </jdk>
+  </component>
+</application>
