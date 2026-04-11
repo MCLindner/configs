@@ -20,8 +20,8 @@ return {
 		-- Useful status updates for LSP.
 		{ "j-hui/fidget.nvim", opts = {} },
 
-		-- Allows extra capabilities provided by nvim-cmp
-		"hrsh7th/cmp-nvim-lsp",
+		-- Allows extra capabilities provided by blink.cmp
+		"saghen/blink.cmp",
 	},
 	config = function()
 		-- Brief aside: **What is LSP?**
@@ -69,27 +69,27 @@ return {
 				-- Jump to the definition of the word under your cursor.
 				--  This is where a variable was first declared, or where a function is defined, etc.
 				--  To jump back, press <C-t>.
-				map("gd", require("telescope.builtin").lsp_definitions, "[G]oto [D]efinition")
+				map("gd", function() Snacks.picker.lsp_definitions() end, "[G]oto [D]efinition")
 
 				-- Find references for the word under your cursor.
-				map("gr", require("telescope.builtin").lsp_references, "[G]oto [R]eferences")
+				map("gr", function() Snacks.picker.lsp_references() end, "[G]oto [R]eferences")
 
 				-- Jump to the implementation of the word under your cursor.
 				--  Useful when your language has ways of declaring types without an actual implementation.
-				map("gI", require("telescope.builtin").lsp_implementations, "[G]oto [I]mplementation")
+				map("gI", function() Snacks.picker.lsp_implementations() end, "[G]oto [I]mplementation")
 
 				-- Jump to the type of the word under your cursor.
 				--  Useful when you're not sure what type a variable is and you want to see
 				--  the definition of its *type*, not where it was *defined*.
-				map("<leader>D", require("telescope.builtin").lsp_type_definitions, "Type [D]efinition")
+				map("<leader>D", function() Snacks.picker.lsp_type_definitions() end, "Type [D]efinition")
 
 				-- Fuzzy find all the symbols in your current document.
 				--  Symbols are things like variables, functions, types, etc.
-				map("<leader>ds", require("telescope.builtin").lsp_document_symbols, "[D]ocument [S]ymbols")
+				map("<leader>ds", function() Snacks.picker.lsp_symbols() end, "[D]ocument [S]ymbols")
 
 				-- Fuzzy find all the symbols in your current workspace.
 				--  Similar to document symbols, except searches over your entire project.
-				map("<leader>ws", require("telescope.builtin").lsp_dynamic_workspace_symbols, "[W]orkspace [S]ymbols")
+				map("<leader>ws", function() Snacks.picker.lsp_workspace_symbols() end, "[W]orkspace [S]ymbols")
 
 				-- Rename the variable under your cursor.
 				--  Most Language Servers support renaming across files, etc.
@@ -206,8 +206,11 @@ return {
 		--  By default, Neovim doesn't support everything that is in the LSP specification.
 		--  When you add nvim-cmp, luasnip, etc. Neovim now has *more* capabilities.
 		--  So, we create new capabilities with nvim cmp, and then broadcast that to the servers.
-		local capabilities = vim.lsp.protocol.make_client_capabilities()
-		capabilities = vim.tbl_deep_extend("force", capabilities, require("cmp_nvim_lsp").default_capabilities())
+		local capabilities = vim.tbl_deep_extend(
+			"force",
+			vim.lsp.protocol.make_client_capabilities(),
+			require("blink.cmp").get_lsp_capabilities()
+		)
 
 		-- Enable the following language servers
 		--  Feel free to add/remove any LSPs that you want here. They will automatically be installed.
@@ -237,7 +240,7 @@ return {
 			-- python
 			basedpyright = {},
 			-- database
-			postgrestools = {},
+			postgres_lsp = {},
 			-- go
 			gopls = {},
 			-- lua
@@ -270,11 +273,15 @@ return {
 		--
 		-- You can add other tools here that you want Mason to install
 		-- for you, so that they are available from within Neovim.
-		local ensure_installed = vim.tbl_keys(servers or {})
+		local ensure_installed = vim.tbl_filter(function(s)
+			-- postgres_lsp is the lspconfig name; mason package name differs
+			return s ~= "postgres_lsp"
+		end, vim.tbl_keys(servers or {}))
 		vim.list_extend(ensure_installed, {
 			"stylua", -- Used to format Lua code
 			"csharpier",
 			"ruff",
+			"postgres-language-server", -- mason package for postgres_lsp
 		})
 		require("mason-tool-installer").setup({ ensure_installed = ensure_installed })
 
