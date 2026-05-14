@@ -3,7 +3,6 @@
 " You can find a list of commands here: https://jb.gg/h38q75
 " Find more examples here: https://jb.gg/share-ideavimrc
 
-" https://github.com/JetBrains/ideavim/wiki/%22set%22-commands
 set highlightedyank
 set number                        " Show current line number
 set relativenumber                " Show relative line numbers
@@ -21,7 +20,6 @@ set commentary
 set surround                      " emulate vim-surround plugin
 set ideajoin
 set ideawrite
-" set ideastatusicon=disabled
 set multiple-cursors
 
 " leader key bindings
@@ -40,29 +38,19 @@ nnoremap <C-j> <C-w>j
 nnoremap <C-k> <C-w>k
 nnoremap <C-l> <C-w>l
 
-" Remap multiple-cursors shortcuts to match terryma/vim-multiple-cursors
-nmap <C-n> <Plug>NextWholeOccurrence
-xmap <C-n> <Plug>NextWholeOccurrence
-nmap g<C-n> <Plug>NextOccurrence
-xmap g<C-n> <Plug>NextOccurrence
-xmap <C-x> <Plug>SkipOccurrence
-xmap <C-p> <Plug>RemoveOccurrence
-
-" Note that the default <A-n> and g<A-n> shortcuts don't work on Mac due to dead keys.
-" <A-n> is used to enter accented text e.g. ñ
-" Feel free to pick your own mappings that are not affected. I like to use <leader>
-nmap <leader><C-n> <Plug>AllWholeOccurrences
-xmap <leader><C-n> <Plug>AllWholeOccurrences
-nmap <leader>g<C-n> <Plug>AllOccurrences
-xmap <leader>g<C-n> <Plug>AllOccurrences
-
+" Editor actions
 map <leader>h :action ShowHoverInfo<CR>
-map <leader>z <Action>(ToggleDistractionFreeMode)
-map <leader>sf <Action>(GotoFile)
-" Map \r to the Reformat Code action
-:map \r <Action>(ReformatCode)
-" Map <leader>d to start debug
-:map <leader>d <Action>(Debug)
-" Map \b to toggle the breakpoint on the current line
-:map \b <Action>(ToggleLineBreakpoint)
 map <leader>qi <Action>(QuickImplementations)
+
+map <leader>sf <Action>(GotoFile)
+
+map <leader>d <Action>(Debug)
+map <leader>b <Action>(ToggleLineBreakpoint)
+
+map <leader>z <Action>(ToggleDistractionFreeMode)
+map <leader>tp <Action>(ActivateProjectToolWindow)
+map <leader>tt <Action>(ActivateTerminalToolWindow)
+map <leader>tg <Action>(ActivateCommitToolWindow)
+
+map <leader>rn <Action>(RenameElement)
+map <leader>rf <Action>(ReformatCode)
