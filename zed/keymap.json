@@ -28,7 +28,7 @@
       "space t t": "terminal_panel::Toggle",
       "space t p": "project_panel::ToggleFocus",
       "space t g": "git_panel::ToggleFocus",
-      "space z": "workspace::ToggleZoom",
+      "space t z": "workspace::ToggleZoom",
       "ctrl-h": "workspace::ActivatePaneLeft",
       "ctrl-j": "workspace::ActivatePaneDown",
       "ctrl-k": "workspace::ActivatePaneUp",
