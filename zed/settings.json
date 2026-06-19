@@ -7,11 +7,23 @@
 // custom settings, run `zed: open default settings` from the
 // command palette (cmd-shift-p / ctrl-shift-p)
 {
+  "context_servers": {
+    "kagimcp": {
+      "command": "uvx",
+      "args": ["kagimcp"]
+    }
+  },
   "disable_ai": false,
   "proxy": "",
   "agent": {
     "tool_permissions": {
       "tools": {
+        "mcp:kagimcp:kagi_search_fetch": {
+          "default": "allow"
+        },
+        "mcp:kagimcp:kagi_extract": {
+          "default": "allow"
+        },
         "terminal": {
           "always_allow": [
             {
@@ -22,6 +34,12 @@
             },
             {
               "pattern": "^ls\\s+/home/michael/\\.local/zed\\.app/libexec/(\\s|$)"
+            },
+            {
+              "pattern": "^cut\\b"
+            },
+            {
+              "pattern": "^base64\\b"
             }
           ]
         }
@@ -44,12 +62,12 @@
         "effort": "medium",
         "model": "opencode/big-pickle"
       },
-      "type": "registry",
-    },
+      "type": "registry"
+    }
   },
   "cli_default_open_behavior": "existing_window",
   "session": {
-    "trust_all_worktrees": true,
+    "trust_all_worktrees": true
   },
   "vim_mode": true,
   "base_keymap": "VSCode",
@@ -58,7 +76,7 @@
   "theme": {
     "mode": "system",
     "light": "One Light",
-    "dark": "One Dark",
+    "dark": "One Dark"
   },
   "edit_predictions": {
     "provider": "ollama",
@@ -66,8 +84,8 @@
       "api_url": "http://localhost:11434",
       "model": "qwen2.5-coder:7b-base",
       "prompt_format": "infer",
-      "max_output_tokens": 512,
-    },
+      "max_output_tokens": 512
+    }
   },
   "language_models": {
     "ollama": {
@@ -76,14 +94,14 @@
         {
           "name": "qwen2.5-coder:7b-base",
           "display_name": "Qwen 2.5 Coder 7B (base)",
-          "max_tokens": 4096,
+          "max_tokens": 4096
         },
         {
           "name": "qwen2.5-coder:7b-instruct",
           "display_name": "Qwen 2.5 Coder 7B Instruct",
-          "max_tokens": 4096,
-        },
-      ],
-    },
-  },
+          "max_tokens": 4096
+        }
+      ]
+    }
+  }
 }
