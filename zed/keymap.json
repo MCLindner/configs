@@ -1,0 +1,38 @@
+[
+  {
+    "context": "Editor && vim_mode == normal",
+    "bindings": {
+      "space t c": "workspace::ToggleLeftDock",
+      "space t ;": "workspace::ToggleRightDock",
+      "space t t": "terminal_panel::Toggle",
+      "space t p": "project_panel::ToggleFocus",
+      "space t g": "git_panel::ToggleFocus",
+      "space z": "workspace::ToggleZoom",
+    },
+  },
+  {
+    "context": "Editor",
+    "bindings": {
+      "alt-/": "buffer_search::DeployReplace",
+      "ctrl-h": "workspace::ActivatePaneLeft",
+      "ctrl-j": "workspace::ActivatePaneDown",
+      "ctrl-k": "workspace::ActivatePaneUp",
+      "ctrl-l": "workspace::ActivatePaneRight",
+    },
+  },
+  {
+    "context": "Workspace",
+    "bindings": {
+      "space t c": "workspace::ToggleLeftDock",
+      "space t ;": "workspace::ToggleRightDock",
+      "space t t": "terminal_panel::Toggle",
+      "space t p": "project_panel::ToggleFocus",
+      "space t g": "git_panel::ToggleFocus",
+      "space z": "workspace::ToggleZoom",
+      "ctrl-h": "workspace::ActivatePaneLeft",
+      "ctrl-j": "workspace::ActivatePaneDown",
+      "ctrl-k": "workspace::ActivatePaneUp",
+      "ctrl-l": "workspace::ActivatePaneRight",
+    },
+  },
+]
