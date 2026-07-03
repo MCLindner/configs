@@ -13,7 +13,7 @@
       "args": ["kagimcp"]
     }
   },
-  "disable_ai": true,
+  "disable_ai": false,
   "proxy": "",
   "agent": {
     "tool_permissions": {
@@ -46,9 +46,10 @@
       }
     },
     "default_model": {
+      "effort": "xhigh",
       "provider": "opencode",
-      "model": "free/big-pickle",
-      "enable_thinking": false
+      "model": "go/deepseek-v4-flash",
+      "enable_thinking": true
     },
     "inline_assistant_model": {
       "provider": "ollama",
@@ -69,7 +70,7 @@
     "trust_all_worktrees": true
   },
   "vim_mode": true,
-  "relative_line_numbers": "enabled",
+  "relative_line_numbers": true,
   "base_keymap": "VSCode",
   "ui_font_size": 16,
   "buffer_font_size": 15,

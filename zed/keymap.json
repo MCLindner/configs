@@ -3,11 +3,28 @@
     "context": "Editor && vim_mode == normal",
     "bindings": {
       "space t c": "workspace::ToggleLeftDock",
+      "space t h": "multi_workspace::ToggleWorkspaceSidebar",
       "space t ;": "workspace::ToggleRightDock",
-      "space t t": "terminal_panel::Toggle",
+      "space t b": "workspace::ToggleBottomDock",
+      "space t t": "terminal_panel::ToggleFocus",
       "space t p": "project_panel::ToggleFocus",
       "space t g": "git_panel::ToggleFocus",
-      "space z": "workspace::ToggleZoom",
+      "space t d": "debug_panel::ToggleFocus",
+      "space t z": "workspace::ToggleZoom",
+    },
+  },
+  {
+    "context": "!Editor && !Terminal",
+    "bindings": {
+      "space t c": "workspace::ToggleLeftDock",
+      "space t h": "multi_workspace::ToggleWorkspaceSidebar",
+      "space t ;": "workspace::ToggleRightDock",
+      "space t b": "workspace::ToggleBottomDock",
+      "space t t": "terminal_panel::ToggleFocus",
+      "space t p": "project_panel::ToggleFocus",
+      "space t g": "git_panel::ToggleFocus",
+      "space t d": "debug_panel::ToggleFocus",
+      "space t z": "workspace::ToggleZoom",
     },
   },
   {
@@ -23,12 +40,15 @@
   {
     "context": "Workspace",
     "bindings": {
-      "space t c": "workspace::ToggleLeftDock",
-      "space t ;": "workspace::ToggleRightDock",
-      "space t t": "terminal_panel::Toggle",
-      "space t p": "project_panel::ToggleFocus",
-      "space t g": "git_panel::ToggleFocus",
-      "space t z": "workspace::ToggleZoom",
+      "ctrl-h": "workspace::ActivatePaneLeft",
+      "ctrl-j": "workspace::ActivatePaneDown",
+      "ctrl-k": "workspace::ActivatePaneUp",
+      "ctrl-l": "workspace::ActivatePaneRight",
+    },
+  },
+  {
+    "context": "Multi-Workspace",
+    "bindings": {
       "ctrl-h": "workspace::ActivatePaneLeft",
       "ctrl-j": "workspace::ActivatePaneDown",
       "ctrl-k": "workspace::ActivatePaneUp",
