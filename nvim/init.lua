@@ -47,25 +47,19 @@ if vim.g.vscode then
 	vim.keymap.set("n", "<C-k>", action("workbench.action.navigateUp"), { desc = "Navigate window up" })
 	vim.keymap.set("n", "<C-l>", action("workbench.action.navigateRight"), { desc = "Navigate window right" })
 
-	-- Multi-cursor (mirrors terryma/vim-multiple-cursors)
-	vim.keymap.set("n", "<C-n>", action("editor.action.addSelectionToNextFindMatch"), { desc = "Add cursor at next match" })
-
-	-- Q: format whole document (Q -> gq style)
-	vim.keymap.set("n", "Q", action("editor.action.formatDocument"), { desc = "Format document" })
-
 	-- ----- Leader actions (leader = <space>) -----
-	vim.keymap.set("n", "<leader>h", action("editor.action.showHover"), { desc = "Show hover info" })
-	vim.keymap.set("n", "<leader>qi", action("editor.action.peekImplementation"), { desc = "Quick implementations" })
-	vim.keymap.set("n", "<leader>sf", action("workbench.action.quickOpen"), { desc = "Go to file" })
-	vim.keymap.set("n", "<leader>d", action("workbench.action.debug.start"), { desc = "Start debug" })
+	-- vim.keymap.set("n", "<leader>qi", action("editor.action.peekImplementation"), { desc = "Quick implementations" })
+	-- vim.keymap.set("n", "<leader>sf", action("workbench.action.quickOpen"), { desc = "Go to file" })
+	-- vim.keymap.set("n", "<leader>dc", action("workbench.action.debug.start"), { desc = "Start debug" })
+    --
+    -- Editor navigation
 	vim.keymap.set("n", "<leader>b", action("editor.debug.action.toggleBreakpoint"), { desc = "Toggle breakpoint" })
-	vim.keymap.set("n", "<leader>z", action("workbench.action.toggleZenMode"), { desc = "Toggle Zen mode" })
+	vim.keymap.set("n", "<leader>tz", action("workbench.action.toggleZenMode"), { desc = "Toggle Zen mode" })
 	vim.keymap.set("n", "<leader>tp", action("workbench.view.explorer"), { desc = "Explorer (project)" })
 	vim.keymap.set("n", "<leader>tt", action("workbench.action.terminal.toggleTerminal"), { desc = "Toggle terminal" })
 	vim.keymap.set("n", "<leader>tg", action("workbench.view.scm"), { desc = "Source control" })
+	vim.keymap.set("n", "<leader>t;", action("workbench.action.toggleSidebarVisibility"), { desc = "Toggle sidebar" })
 	vim.keymap.set("n", "<leader>tc", action("workbench.action.toggleAuxiliaryBar"), { desc = "Toggle aux-bar (Devmate)" })
-	vim.keymap.set("n", "<leader>rn", action("editor.action.rename"), { desc = "Rename symbol" })
-	vim.keymap.set("n", "<leader>rf", action("editor.action.formatDocument"), { desc = "Reformat document" })
 
 	-- ----- Devmate / Metamate prefix: <leader>a (a = AI) -----
 	vim.keymap.set("n", "<leader>an", action("metamate.chat.new"), { desc = "New chat session" })
@@ -85,15 +79,8 @@ if vim.g.vscode then
 	-- ============================================================
 	-- Visual-mode key bindings
 	-- ============================================================
+    -- Editor navigation
 	vim.keymap.set("x", "<leader>tc", action("workbench.action.toggleAuxiliaryBar"), { desc = "Toggle aux-bar" })
-
-	-- Multi-cursor (terryma/vim-multiple-cursors style)
-	vim.keymap.set("x", "<C-n>", action("editor.action.addSelectionToNextFindMatch"), { desc = "Add next occurrence" })
-	vim.keymap.set("x", "<C-x>", action("editor.action.moveSelectionToNextFindMatch"), { desc = "Skip occurrence" })
-
-	-- Format selection / rename
-	vim.keymap.set("x", "<leader>rf", action("editor.action.formatSelection"), { desc = "Format selection" })
-	vim.keymap.set("x", "<leader>rn", action("editor.action.rename"), { desc = "Rename symbol" })
 
 	-- Devmate / Metamate with the current selection
 	vim.keymap.set("x", "<leader>aa", action("code-compose.add-user-selection-to-context"), { desc = "Add selection to context" })
@@ -102,9 +89,6 @@ if vim.g.vscode then
 	vim.keymap.set("x", "<leader>ai", action("code-compose.show-inline-comment"), { desc = "Inline chat on selection" })
 	vim.keymap.set("x", "<leader>ar", action("code-compose.review-code"), { desc = "Review selection" })
 	vim.keymap.set("x", "<leader>ah", action("devmate.chat.showHistory"), { desc = "Chat history" })
-end
-
 else
-	-- ordinary Neovim
-	require("mlindner")
+    require("config.lazy")
 end
