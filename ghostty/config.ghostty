@@ -1,0 +1,9 @@
+theme = Dracula
+
+# Vim motions for split navigation
+# `performable:` means Ghostty only consumes the key if there's a split to move to,
+# otherwise it passes through (e.g. to Neovim splits).
+keybind = performable:ctrl+h=goto_split:left
+keybind = performable:ctrl+j=goto_split:down
+keybind = performable:ctrl+k=goto_split:up
+keybind = performable:ctrl+l=goto_split:right
