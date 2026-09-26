@@ -22,13 +22,23 @@ vim.keymap.set("n", "<C-j>", action("workbench.action.navigateDown"), { desc = "
 vim.keymap.set("n", "<C-k>", action("workbench.action.navigateUp"), { desc = "Navigate window up" })
 vim.keymap.set("n", "<C-l>", action("workbench.action.navigateRight"), { desc = "Navigate window right" })
 
--- ----- Leader actions (leader = <space>) -----
--- vim.keymap.set("n", "<leader>qi", action("editor.action.peekImplementation"), { desc = "Quick implementations" })
--- vim.keymap.set("n", "<leader>sf", action("workbench.action.quickOpen"), { desc = "Go to file" })
--- vim.keymap.set("n", "<leader>dc", action("workbench.action.debug.start"), { desc = "Start debug" })
+-- ----- Search (mirror of telescope sf/sg/sb/ss in regular nvim) -----
+-- sh (help_tags) has no VSCode equivalent, so it stays nvim-only.
+vim.keymap.set("n", "<leader>sf", action("workbench.action.quickOpen"), { desc = "Go to file" })
+vim.keymap.set("n", "<leader>sg", action("workbench.action.findInFiles"), { desc = "Search in files" })
+vim.keymap.set("n", "<leader>sb", action("workbench.action.showAllEditors"), { desc = "Show editors (buffers)" })
+vim.keymap.set("n", "<leader>ss", action("workbench.action.gotoSymbol"), { desc = "Go to symbol in file" })
 --
+-- ----- Debug: standard function keys (VSCode-only; native DAP removed) -----
+vim.keymap.set("n", "<F9>", action("editor.debug.action.toggleBreakpoint"), { desc = "Toggle breakpoint" })
+vim.keymap.set("n", "<F5>", action("workbench.action.debug.continue"), { desc = "Start/Continue" })
+vim.keymap.set("n", "<F10>", action("workbench.action.debug.stepOver"), { desc = "Step over" })
+vim.keymap.set("n", "<F11>", action("workbench.action.debug.stepInto"), { desc = "Step into" })
+vim.keymap.set("n", "<S-F11>", action("workbench.action.debug.stepOut"), { desc = "Step out" })
+vim.keymap.set("n", "<S-F5>", action("workbench.action.debug.stop"), { desc = "Stop" })
+vim.keymap.set("n", "<C-S-F5>", action("workbench.action.debug.restart"), { desc = "Restart" })
+
 -- Editor navigation
-vim.keymap.set("n", "<leader>b", action("editor.debug.action.toggleBreakpoint"), { desc = "Toggle breakpoint" })
 vim.keymap.set("n", "<leader>tz", action("workbench.action.toggleZenMode"), { desc = "Toggle Zen mode" })
 vim.keymap.set("n", "<leader>tp", action("workbench.view.explorer"), { desc = "Explorer (project)" })
 vim.keymap.set("n", "<leader>tt", action("workbench.action.terminal.toggleTerminal"), { desc = "Toggle terminal" })
