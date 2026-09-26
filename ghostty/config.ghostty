@@ -1,4 +1,5 @@
 theme = Dracula
+gtk-titlebar=false
 
 # Vim motions for split navigation
 # `performable:` means Ghostty only consumes the key if there's a split to move to,
