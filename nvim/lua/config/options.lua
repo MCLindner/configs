@@ -12,7 +12,7 @@ vim.opt.smartcase = true
 vim.opt.incsearch = true
 vim.opt.history = 10000
 
--- Short mapped-sequence wait so `jk` feels snappy
+-- Short mapped-sequence wait so `jk`/`kj` feels snappy
 vim.opt.timeoutlen = 300
 vim.opt.updatetime = 250
 
